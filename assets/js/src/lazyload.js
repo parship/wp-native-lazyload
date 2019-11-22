@@ -39,6 +39,7 @@
 						lazyElement.sizes = lazyElement.dataset.sizes;
 						delete lazyElement.dataset.sizes;
 					}
+					typeof initMasonry === 'function' ? initMasonry() : '';
 					lazyElement.classList.remove( 'native-lazyload-js-fallback' );
 					lazyObserver.unobserve( lazyElement );
 				}
@@ -70,6 +71,7 @@
 									lazyElement.sizes = lazyElement.dataset.sizes;
 									delete lazyElement.dataset.sizes;
 								}
+								typeof initMasonry === 'function' ? initMasonry() : '';
 								lazyElement.classList.remove( 'native-lazyload-js-fallback' );
 							}
 
